@@ -1,0 +1,10 @@
+ curl https://api.jcdecaux.com/vls/v1/stations?apiKey=2bb3fd1836575dea799d0dffc9ab065a596a53d7 | python -m json.tool
+
+
+//start Kafka 
+sudo /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties
+
+//create topic
+
+/opt/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+
